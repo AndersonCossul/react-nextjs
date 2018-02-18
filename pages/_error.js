@@ -4,7 +4,7 @@ import Link from 'next/link'
 const errorPage = () => (
   <div>
     <h1>Oops, something went wrong!</h1>
-    <p>Let's go <Link href="/">home.</Link></p>
+    <p>Let's go <Link href="/"><a>home</a></Link>.</p>
   </div>
 )
 
