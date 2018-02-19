@@ -1,15 +1,32 @@
 import Layout from '../components/layout/master'
 import PostLink from '../components/PostLink/PostLink'
+import fetch from 'isomorphic-unfetch'
 
-const Index = () => (
+const index = (props) => (
   <Layout>
-    <h1>My Blog</h1>
+    <h1>Batman TV Shows</h1>
     <ul>
-      <PostLink id="hello-next-js" title="Hello Next.js" />
-      <PostLink id="learn-next-js" title="Learn Next.js is awesome" />
-      <PostLink id="ssr-next-js" title="SSR for the win" />
+      {
+        props.shows.map(({show}) => (
+          <PostLink
+            key={show.id}
+            id={show.id}
+            name={show.name} />
+        ))
+      }
     </ul>
   </Layout>
 )
 
-export default Index
+index.getInitialProps = async () => {
+  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+  const data = await res.json()
+
+  console.log(`Show data fetched. Count: ${data.length}`)
+
+  return {
+    shows: data
+  }
+}
+
+export default index
