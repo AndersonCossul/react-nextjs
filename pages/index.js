@@ -1,20 +1,16 @@
 import Layout from '../components/layout/master'
-import PostLink from '../components/PostLink/PostLink'
+import Posts from '../components/Posts/Posts'
 import fetch from 'isomorphic-unfetch'
 
 const index = (props) => (
   <Layout>
     <h1>Batman TV Shows</h1>
-    <ul>
-      {
-        props.shows.map(({show}) => (
-          <PostLink
-            key={show.id}
-            id={show.id}
-            name={show.name} />
-        ))
+    <Posts shows={props.shows} />
+    <style jsx>{
+      h1 {
+        font-family: "Arial";
       }
-    </ul>
+    }</style>
   </Layout>
 )
 
