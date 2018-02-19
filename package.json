@@ -6,9 +6,10 @@
   "author": "Anderson Cossul <anderson_cossul@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "node server.js"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "next": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
