@@ -5,6 +5,9 @@
   "repository": "https://github.com/AndersonCossul/react-nextjs",
   "author": "Anderson Cossul <anderson_cossul@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next"
+  },
   "dependencies": {
     "next": "^5.0.0",
     "react": "^16.2.0",
