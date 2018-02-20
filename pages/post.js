@@ -13,6 +13,7 @@ post.getInitialProps = async function (context) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
   const show = await res.json()
 
+  // post will be a formatted version of the show
   const post = {
     ...show,
     summary: show.summary.replace(/<[/]?p>/g, ''),

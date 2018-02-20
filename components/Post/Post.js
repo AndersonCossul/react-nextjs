@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export default (props) => (
   <section>
     <Title>{props.post.name}</Title>
-    <Description>{props.post.summary}</Description>
+    <Description>{props.post.summary}></Description>
     <img src={props.post.image} />
   </section>
 )
