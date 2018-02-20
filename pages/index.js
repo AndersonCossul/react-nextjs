@@ -6,11 +6,11 @@ const index = (props) => (
   <Layout>
     <h1>Batman TV Shows</h1>
     <Posts shows={props.shows} />
-    <style jsx>{
+    <style jsx>{`
       h1 {
         font-family: "Arial";
       }
-    }</style>
+    `}</style>
   </Layout>
 )
 
