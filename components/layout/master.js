@@ -1,3 +1,4 @@
+import Head from './partials/Head'
 import Header from './partials/Header'
 
 const layoutStyle = {
@@ -8,6 +9,7 @@ const layoutStyle = {
 
 const layout = (props) => (
   <div style={layoutStyle}>
+    <Head metas={props.metas} />
     <Header />
     {props.children}
   </div>
