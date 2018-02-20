@@ -13,7 +13,7 @@ const layout = (props) => (
     <Head metas={props.metas} />
     <Header />
     {props.children}
-    <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
+    <link rel='stylesheet' type='text/css' href='/static/vendor/nprogress.css' />
   </div>
 )
 

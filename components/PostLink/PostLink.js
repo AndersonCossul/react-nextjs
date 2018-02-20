@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import { Link } from '../../routes'
 import styled from 'styled-components'
 
 const postLink = (props) => (
   <ListItem>
-    <Link as={`/p/${props.id}`} href={`/post?id=${props.id}`}>
+    <Link route="post" params={{ id: props.id }} passHref >
       <StyledLink>{props.name}</StyledLink>
     </Link>
   </ListItem>

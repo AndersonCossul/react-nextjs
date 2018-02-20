@@ -8,8 +8,8 @@ const post = (props) => (
   </Layout>
 )
 
-post.getInitialProps = async function (context) {
-  const { id } = context.query
+post.getInitialProps = async function ({ query }) {
+  const id = query.id
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
   const show = await res.json()
 
@@ -21,7 +21,7 @@ post.getInitialProps = async function (context) {
   }
 
   return {
-    post,
+    post: post,
     metas: {
       title: post.name,
       description: post.summary
